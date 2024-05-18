@@ -108,16 +108,16 @@ SWITCH  : 'switch';
 CASE    : 'case';
 DEFAULT : 'default';
 
-// Logical expressions
-FORALL  : 'forall';
-EXISTS  : 'exists';
-SUM     : 'sum';
-PROD    : 'prod';
-AVG     : 'avg';
-MINIMUM : 'minimum';
-MAXIMUM : 'maximum';
-ARGMAX  : 'argmax';
-ARGMIN  : 'argmin';
+// Aggregation expressions
+FORALL  : 'forall_';
+EXISTS  : 'exists_';
+SUM     : 'sum_';
+PROD    : 'prod_';
+AVG     : 'avg_';
+MINIMUM : 'minimum_';
+MAXIMUM : 'maximum_';
+ARGMAX  : 'argmax_';
+ARGMIN  : 'argmin_';
 
 // Probability distributions
 // Discrete probability distributions
