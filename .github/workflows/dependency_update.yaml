@@ -33,6 +33,7 @@ jobs:
       - name: Update dependencies
         run: npm update
 
+        # Does not work as expected. Ignores package licenses leading to false diffs.
       - name: Check for changes
         id: git-check
         run: |
