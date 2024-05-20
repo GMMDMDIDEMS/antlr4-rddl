@@ -1,4 +1,4 @@
-// Generated from ./RDDLParser.g4 by ANTLR 4.13.1
+// Generated from src/main/grammar/antlr4/RDDLParser.g4 by ANTLR 4.13.1
 
 import { ErrorNode, ParseTreeListener, ParserRuleContext, TerminalNode } from "antlr4ng";
 
