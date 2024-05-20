@@ -2,15 +2,31 @@
 An ANTLR4 grammar for RDDL files.
 
 ## Installation
-For TypeScript code generation the `antlr4ng` and `antlr4ng-cli` package are required. They can be installed via
+The `antlr4ng` package is required for `TypeScript` code generation. It can be installed via
 ```zsh
-npm install antlr4ng antlr4ng-cli --save
+npm i
 ```
 
-## Commands
-To automatically generate TypeScript code, use the following command
+For the generation of `Java` code, the [ANTLR4 grammar syntax support](https://marketplace.visualstudio.com/items?itemName=mike-lischke.vscode-antlr4) package is used. To adopt the folder structure as specified in this repository, you must add the following to your `settings.json` 
 ```zsh
-npx antlr4ng -Dlanguage=TypeScript -o generated/ -visitor -listener -Xexact-output-dir ./RDDLLexer.g4 ./RDDLParser.g4
+  "antlr4.generation": {
+    "outputDir": "../../generated/Java",
+    "mode": "external",
+    "listeners": true,
+    "visitors": true
+  }
+```
+
+## Code Generation
+`Java` code is automatically generated as soon as one of the `.g4` files is saved.
+
+For `TypeScript` code, either run 
+```zsh
+npm run build
+```
+or use the following command
+```zsh
+antlr4ng -Dlanguage=TypeScript -o src/main/generated/TypeScript/ -visitor -listener -Xexact-output-dir src/main/grammar/antlr4/RDDLLexer.g4 src/main/grammar/antlr4/RDDLParser.g4
 ```
 
 ## Further Development and Resources
@@ -19,4 +35,4 @@ npx antlr4ng -Dlanguage=TypeScript -o generated/ -visitor -listener -Xexact-outp
 - [ ] Add [unittests](https://github.com/antlr/antlr4/blob/master/doc/antlr-project-testing.md)
 
 ## References
-- [Repository](https://github.com/antlr/grammars-v4/tree/master) of grammars written for ANTLR v4
+- [Repository of grammars written for ANTLR v4](https://github.com/antlr/grammars-v4/tree/master)
